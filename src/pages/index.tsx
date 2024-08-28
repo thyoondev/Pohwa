@@ -9,7 +9,7 @@ const MENU_LIST = [
   // },
   {
     title: " Instagram",
-    url: () => window.open("https://www.instagram.com/"),
+    url: () => window.open("https://www.instagram.com/pohwa_official/"),
   },
 ];
 
