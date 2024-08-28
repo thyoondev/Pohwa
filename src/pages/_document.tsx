@@ -5,7 +5,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <title>포화_Pohwa</title>
+        <title>포화. 적</title>
         <meta name="description" content="포화. 적" />
         <meta property="og:title" content="포화. 적" />
         <meta property="og:description" content="포화. 적" />
