@@ -1,9 +1,7 @@
-import bgVideo from "/videos/mincho/index.mp4";
-import BackgroundVideo from "next-video/background-video";
+import ReactPlayer from "react-player";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useMediaQuery } from "@/shared/hooks/useMediaQuery";
-
 const MENU_LIST = [
   // {
   //   title: "About",
@@ -30,10 +28,18 @@ export default function Home() {
       </div>
 
       <main>
-        <BackgroundVideo
-          src={bgVideo}
-          className="h-screen object-cover object-center"
-        >
+        <div className="h-screen w-full relative">
+          <ReactPlayer
+            url={"/assets/videos/mincho/index.mp4"}
+            loop
+            muted
+            controls={false}
+            playing
+            height={"100%"}
+            width={"100%"}
+            background={true}
+            className="bg-video"
+          />
           <div className="absolute left-0 bottom-0 z-10 pl-4 pb-4 lg:pl-8 lg:pb-8 flex flex-col gap-2">
             {MENU_LIST.map((menu, i) => (
               <span
@@ -57,7 +63,7 @@ export default function Home() {
               </span>
             ))}
           </div>
-        </BackgroundVideo>
+        </div>
 
         {/* <div className="flex justify-center items-center my-24">
         <InstaCarousel />

@@ -117,3 +117,7 @@
     opacity: 0;
   }
 } */
+
+.bg-video video {
+  object-fit: cover;
+}
