@@ -7,11 +7,11 @@ export default function Document() {
       <Head>
         <title>포화_Pohwa</title>
         <meta name="description" content="포화. 적" />
-        <meta property="og:title" content="포화_Pohwa" />
+        <meta property="og:title" content="포화. 적" />
         <meta property="og:description" content="포화. 적" />
         <meta property="og:url" content="https://pohwa.xyz/" />
         <meta property="og:image" content="https://pohwa.xyz/logo.png" />
-        <meta property="og:site_name" content="포화_Pohwa" />
+        <meta property="og:site_name" content="포화. 적" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
         <link rel="icon" href="https://pohwa.xyz/logo.png" />
