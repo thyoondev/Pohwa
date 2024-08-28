@@ -28,7 +28,7 @@ export default function Home() {
       </div>
 
       <main>
-        <div className="h-screen w-full relative">
+        <div className="h-[100dvh] w-full relative">
           <ReactPlayer
             url={"https://pohwa.xyz/assets/video/mincho/index.mp4"}
             loop
