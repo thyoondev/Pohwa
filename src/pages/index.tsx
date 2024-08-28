@@ -1,3 +1,4 @@
+import bgVideo from "/videos/mincho/index.mp4";
 import BackgroundVideo from "next-video/background-video";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -30,7 +31,7 @@ export default function Home() {
 
       <main>
         <BackgroundVideo
-          src={"/videos/mincho/index.mp4"}
+          src={bgVideo}
           className="h-screen object-cover object-center"
         >
           <div className="absolute left-0 bottom-0 z-10 pl-4 pb-4 lg:pl-8 lg:pb-8 flex flex-col gap-2">
