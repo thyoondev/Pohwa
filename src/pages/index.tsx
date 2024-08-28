@@ -30,7 +30,7 @@ export default function Home() {
       <main>
         <div className="h-screen w-full relative">
           <ReactPlayer
-            url={"/assets/videos/mincho/index.mp4"}
+            url={"https://pohwa.xyz/assets/video/mincho/index.mp4"}
             loop
             muted
             controls={false}
@@ -38,6 +38,7 @@ export default function Home() {
             height={"100%"}
             width={"100%"}
             background={true}
+            playsinline={true}
             className="bg-video"
           />
           <div className="absolute left-0 bottom-0 z-10 pl-4 pb-4 lg:pl-8 lg:pb-8 flex flex-col gap-2">
