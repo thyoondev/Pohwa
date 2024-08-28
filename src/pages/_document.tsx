@@ -14,6 +14,20 @@ export default function Document() {
         <meta property="og:site_name" content="포화_Pohwa" />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
+        <link rel="icon" href="https://pohwa.xyz/logo.png" />
+        <link rel="apple-touch-icon" href="https://pohwa.xyz/logo.png" />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="https://pohwa.xyz/logo.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="https://pohwa.xyz/logo.png"
+        />
       </Head>
       <body>
         <ThemeProvider
