@@ -4,7 +4,7 @@ import ReactPlayer from "react-player";
 
 function Panel1() {
   return (
-    <section className="w-full h-[100dvh] relative">
+    <section className="w-[100vw] h-[100dvh] relative">
       <ReactPlayer
         url={"https://pohwa.xyz/assets/video/mincho/index.mp4"}
         loop
