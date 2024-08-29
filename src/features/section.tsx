@@ -22,7 +22,7 @@ export const Section = forwardRef<
       whileInView="onscreen"
       viewport={{ once: false, amount: 0.7 }}
       ref={ref as any}
-      className={`flex justify-center items-center w-full h-[100dvh] relative snap-center z-[${
+      className={`flex justify-center items-center w-[100vw] h-[100dvh] relative snap-center z-[${
         index + 1
       }]`}
     >
