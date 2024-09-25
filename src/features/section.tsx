@@ -28,9 +28,9 @@ export const Section = forwardRef<
     >
       <motion.div
         style={{ y: transformY }}
-        className="flex ju stify-center items-center w-full h-full"
+        className="flex ju stify-center items-center w-full h-full "
       >
-        <motion.div>{data}</motion.div>
+        {data}
       </motion.div>
     </motion.div>
   );

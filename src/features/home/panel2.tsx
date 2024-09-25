@@ -4,7 +4,7 @@ function Panel2() {
   return (
     <section className="w-[100vw] h-[100dvh] relative">
       <ReactPlayer
-        url={"https://pohwa.xyz/assets/video/yunoh/index.mp4"}
+        url={"https://pohwa.xyz/assets/video/main/powha_video_2.mp4"}
         loop
         muted
         controls={false}

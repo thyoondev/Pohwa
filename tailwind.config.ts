@@ -20,6 +20,7 @@ const config = {
     extend: {
       fontFamily: {
         anton: ["Anton", "sans-serif"],
+        archivo: ["Archivo Black", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

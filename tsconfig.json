@@ -16,6 +16,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["video.d.ts", "video.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["video.d.ts", "video.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx", "src/features/r3f/effect.js", "src/features/r3f/Lamborghini.js"],
   "exclude": ["node_modules"]
 }
