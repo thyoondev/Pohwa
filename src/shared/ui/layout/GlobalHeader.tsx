@@ -28,7 +28,9 @@ const GlobalHeader = () => {
         ))}
       </nav>
       <div>
-        <MobileSideMenu />
+        <div className="lg:hidden">
+          <MobileSideMenu />
+        </div>
       </div>
     </header>
   );

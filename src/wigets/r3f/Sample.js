@@ -5,10 +5,8 @@ import {
   ScrollControls,
 } from "@react-three/drei";
 import { Effects } from "@/features/r3f/effects";
-// import { Lamborghini } from "@/features/r3f/Lamborghini";
-// import { Model } from "@/features/r3f/s1000rr";
-// import { Model } from "@/features/r3f/h2";
 import { Model } from "@/features/r3f/v4r";
+
 import Camera from "@/features/r3f/camera";
 import { Canvas } from "@react-three/fiber";
 
@@ -17,7 +15,7 @@ export default function SampleR3f() {
     <Canvas>
       <ScrollControls ages={3}>
         <Camera />
-        <Model scale={0.06} />
+
         <hemisphereLight intensity={0.5} />
         <ContactShadows
           resolution={1024}
@@ -97,14 +95,7 @@ export default function SampleR3f() {
           />
         </Environment>
         <Effects />
-        {/* <OrbitControls
-          enablePan={true}
-          enableZoom={false}
-          enableRotate={true}
-          enableDamping={true}
-          minPolarAngle={Math.PI / 2.2}
-          maxPolarAngle={Math.PI / 2.2}
-        /> */}
+        <Model scale={0.06} />
       </ScrollControls>
     </Canvas>
   );
