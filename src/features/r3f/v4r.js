@@ -6,12 +6,21 @@ Source: https://sketchfab.com/3d-models/ducati-v4r-76701e23fbcb408dae5c892594199
 Title: Ducati v4r
 */
 
-import { useGLTF } from "@react-three/drei";
+import { useGLTF, useScroll } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
+import { useRef } from "react";
 
 export function Model(props) {
   const { nodes, materials } = useGLTF("/Ducati V4R.glb");
+  const scrollData = useScroll();
+
+  const boxRef = useRef(null);
+  useFrame(() => {
+    boxRef.current.rotation.y = 1 * ((scrollData.offset * Math.PI) / 1.8);
+  });
+
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} ref={boxRef}>
       <group scale={0.01} position={[0, -17, 0]}>
         <group
           position={[-20.161, -211.721, 0]}
