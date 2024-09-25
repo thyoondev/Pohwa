@@ -1,6 +1,6 @@
 import Panel1 from "@/features/home/panel1";
 import Panel2 from "@/features/home/panel2";
-import Panel3 from "@/features/home/pannel3";
+import Panel3 from "@/features/home/panel3";
 import { Section } from "@/features/section";
 import useWindowSize from "@/shared/hooks/useWindowSize";
 import { useElementScroll } from "framer-motion";
