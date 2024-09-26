@@ -113,7 +113,11 @@ export default function SampleR3f() {
           />
         </Environment>
         <Effects />
-        <Model scale={0.06} />
+        <Model
+          scale={0.06}
+          position={isMobile ? [0, 0, 10] : [0, 0, 0]}
+          rotation={isMobile ? [0, 1, 0] : [0, 0, 0]}
+        />
         {isMobile && (
           <OrbitControls
             enablePan={false}

@@ -9,6 +9,7 @@ Title: Ducati v4r
 import { useGLTF, useScroll } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
+import { isMobile } from "react-device-detect";
 
 export function Model(props) {
   const { nodes, materials } = useGLTF("/Ducati V4R.glb");
@@ -20,7 +21,7 @@ export function Model(props) {
   });
 
   return (
-    <group {...props} dispose={null} ref={boxRef}>
+    <group {...props} dispose={null} ref={isMobile ? null : boxRef}>
       <group scale={0.01} position={[0, -17, 0]}>
         <group
           position={[-20.161, -211.721, 0]}
