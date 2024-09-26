@@ -17,6 +17,7 @@ export function Model(props) {
 
   const boxRef = useRef(null);
   useFrame(() => {
+    if (isMobile) return;
     boxRef.current.rotation.y = 1 * ((scrollData.offset * Math.PI) / 2);
   });
 
