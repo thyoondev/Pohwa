@@ -6,7 +6,7 @@ const GlobalFooter = () => {
       <div className="h-[calc(100dvh-56px)] w-full bg-primary p-4 lg:p-14 snap-center shrink-0">
         <p className="text-background text-4xl lg:text-6xl font-archivo -tracking-[.04em]">
           Motorcycle isn&apos;t just a machine,
-          <br /> it&apos;s an expression of freedom, passion, <br /> and the
+          <br /> It&apos;s an expression of freedom, passion, <br /> And the
           spirit of endless adventure.
           <br />
           <br />
