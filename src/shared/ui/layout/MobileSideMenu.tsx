@@ -24,7 +24,7 @@ export function MobileSideMenu() {
       <SheetContent side={"fullRight"}>
         <SheetHeader>
           <SheetTitle className="justify-center flex">
-            <Image src="/pohwa_logo.svg" width={80} height={80} alt="logo" />
+            <Image src="/pohwa_logo.png" width={80} height={80} alt="logo" />
           </SheetTitle>
         </SheetHeader>
         <div className="grid py-4 text-2xl font-archivo">

@@ -17,7 +17,7 @@ const GlobalFooter = () => {
       </div>
       <footer className="h-[calc(100dvh-56px)] w-full bg-background flex justify-start items-center gap-4 px-4 relative snap-center shrink-0">
         <figure className="w-full h-full flex justify-center items-center">
-          <Image src="/pohwa_logo.svg" alt="logo" width={200} height={96} />
+          <Image src="/pohwa_logo.png" alt="logo" width={200} height={96} />
         </figure>
         <p className="absolute bottom-2 left-2 text-xs uppercase">
           © 2024 pohwa.xyz all rights reserved.

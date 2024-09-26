@@ -13,7 +13,7 @@ const GlobalHeader = () => {
     >
       <figure className="">
         <Image
-          src="/pohwa_logo.svg"
+          src="/pohwa_logo.png"
           width={isDesktop ? 70 : 60}
           height={isDesktop ? 42 : 40}
           alt="logo"

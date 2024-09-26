@@ -1,6 +1,7 @@
 import {
   Environment,
   Lightformer,
+  OrbitControls,
   ScrollControls,
   Text,
 } from "@react-three/drei";
@@ -113,6 +114,11 @@ export default function SampleR3f() {
         </Environment>
         <Effects />
         <Model scale={0.06} />
+        <OrbitControls
+          enablePan={true}
+          enableZoom={false}
+          enableRotate={true}
+        />
       </ScrollControls>
     </Canvas>
   );
