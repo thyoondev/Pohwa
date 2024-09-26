@@ -3,15 +3,17 @@ import Image from "next/image";
 import Link from "next/link";
 import { MobileSideMenu } from "./MobileSideMenu";
 import { MENU_LIST } from "@/entities/menuList";
+import { useRouter } from "next/router";
 
 const GlobalHeader = () => {
+  const router = useRouter();
   const isDesktop = useMediaQuery("(min-width: 640px)");
 
   return (
     <header
       className={`fixed top-0 left-0 z-10 w-full lg:h-14 flex justify-between items-center px-4 py-2 transition-colors duration-300 bg-background`}
     >
-      <figure className="">
+      <figure onClick={() => router.push("/")}>
         <Image
           src="/pohwa_logo.png"
           width={isDesktop ? 70 : 60}
