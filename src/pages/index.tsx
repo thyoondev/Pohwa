@@ -4,7 +4,7 @@ import { Leva } from "leva";
 export default function Home() {
   return (
     <main>
-      <div className="h-[80dvh] lg:h-[calc(100dvh-56px)] snap-center">
+      <div className="h-[90dvh] lg:h-[calc(100dvh-56px)] snap-center">
         <SampleR3f />
         {/* <Stats />  */}
         <Leva collapsed hidden />
