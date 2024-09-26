@@ -114,11 +114,13 @@ export default function SampleR3f() {
         </Environment>
         <Effects />
         <Model scale={0.06} />
-        <OrbitControls
-          enablePan={true}
-          enableZoom={false}
-          enableRotate={true}
-        />
+        {isMobile && (
+          <OrbitControls
+            enablePan={false}
+            enableZoom={true}
+            enableRotate={true}
+          />
+        )}
       </ScrollControls>
     </Canvas>
   );
