@@ -16,15 +16,17 @@ export default function SampleR3f() {
     <Canvas>
       <color attach="background" args={["#0A0A0A"]} />
 
-      <Text
-        scale={isMobile ? [2.8, 8, 10] : [6, 10, 10]}
-        position={[0, 0, -10]}
-        color="red" // default
-        anchorX="center" // default
-        anchorY="middle" // default
-      >
-        POHWA
-      </Text>
+      {!isMobile && (
+        <Text
+          scale={[6, 10, 10]}
+          position={[0, 0, -10]}
+          color="red" // default
+          anchorX="center" // default
+          anchorY="middle" // default
+        >
+          POHWA
+        </Text>
+      )}
       <ScrollControls ages={3}>
         <Camera />
         <hemisphereLight intensity={0.5} />
