@@ -35,7 +35,7 @@ export function MobileSideMenu() {
               key={menu.id}
             >
               <Link
-                href={menu.url.startsWith("http") ? menu.url : `/${menu.url}`}
+                href={menu.url.startsWith("http") ? menu.url : `${menu.url}`}
                 target={menu.url.startsWith("http") ? "_blank" : "_self"}
               >
                 {menu.title}
