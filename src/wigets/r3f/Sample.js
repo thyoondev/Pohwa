@@ -13,7 +13,7 @@ import { isMobile } from "react-device-detect";
 
 export default function SampleR3f() {
   return (
-    <Canvas>
+    <Canvas style={{ touchAction: "none" }}>
       <color attach="background" args={["#0A0A0A"]} />
 
       {!isMobile && (
