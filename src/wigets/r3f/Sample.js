@@ -14,7 +14,6 @@ import { isMobile } from "react-device-detect";
 export default function SampleR3f() {
   return (
     <Canvas
-      style={{ pointerEvents: "none" }}
       onTouchStart={(e) => e.preventDefault()}
       onTouchMove={(e) => e.preventDefault()}
       onTouchEnd={(e) => e.preventDefault()}
