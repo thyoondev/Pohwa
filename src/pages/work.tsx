@@ -11,7 +11,7 @@ import ReactPlayer from "react-player";
 
 const Work = () => {
   return (
-    <div>
+    <div className="snap-start">
       <div className="h-[33.3dvh] flex items-center px-4">
         <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-9xl align-middle">
           Projects All
