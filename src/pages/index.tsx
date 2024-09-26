@@ -7,7 +7,7 @@ export default function Home() {
       <div className="h-[100dvh]">
         <SampleR3f />
         {/* <Stats />  */}
-        <Leva collapsed />
+        <Leva collapsed hidden />
       </div>
     </main>
   );
