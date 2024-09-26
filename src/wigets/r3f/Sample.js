@@ -115,8 +115,8 @@ export default function SampleR3f() {
         <Effects />
         <Model
           scale={0.06}
-          position={isMobile ? [0, 0, 10] : [0, 0, 0]}
-          rotation={isMobile ? [0, 1, 0] : [0, 0, 0]}
+          position={isMobile ? [0, 0, 9.5] : [0, 0, 0]}
+          rotation={isMobile ? [0, 1.4, 0] : [0, 0, 0]}
         />
         {isMobile && (
           <OrbitControls
