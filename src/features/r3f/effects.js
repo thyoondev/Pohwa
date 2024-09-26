@@ -2,11 +2,12 @@ import { useLoader } from "@react-three/fiber";
 import { EffectComposer, SSR, Bloom, LUT } from "@react-three/postprocessing";
 import { useControls } from "leva";
 import { LUTCubeLoader } from "postprocessing";
+import { isMobile } from "react-device-detect";
 
 export function Effects() {
   const texture = useLoader(LUTCubeLoader, "/F-6800-STD.cube");
   const { enabled, ...props } = useControls({
-    enabled: true,
+    enabled: isMobile ? false : true,
     temporalResolve: true,
     STRETCH_MISSED_RAYS: true,
     USE_MRT: true,
