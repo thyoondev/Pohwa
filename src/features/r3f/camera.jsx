@@ -10,7 +10,7 @@ const Camera = () => {
   useFrame(() => {
     const fullScrollRange = 1; // Define the range of one full scroll
     const zStart = 15; // Starting z position
-    const zEnd = 3; // Ending z position
+    const zEnd = 5; // Ending z position
 
     // Calculate the interpolated z position based on the scroll offset
     let zPosition =

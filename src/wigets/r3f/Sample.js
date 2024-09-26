@@ -1,23 +1,34 @@
 import {
   Environment,
   Lightformer,
-  ContactShadows,
   ScrollControls,
+  Text,
 } from "@react-three/drei";
 import { Effects } from "@/features/r3f/effects";
 import { Model } from "@/features/r3f/v4r";
 
 import Camera from "@/features/r3f/camera";
 import { Canvas } from "@react-three/fiber";
+import { isMobile } from "react-device-detect";
 
 export default function SampleR3f() {
   return (
     <Canvas>
+      <color attach="background" args={["#0A0A0A"]} />
+
+      <Text
+        scale={isMobile ? [2.8, 8, 10] : [6, 10, 10]}
+        position={[0, 0, -10]}
+        color="red" // default
+        anchorX="center" // default
+        anchorY="middle" // default
+      >
+        POHWA
+      </Text>
       <ScrollControls ages={3}>
         <Camera />
-
         <hemisphereLight intensity={0.5} />
-        <ContactShadows
+        {/* <ContactShadows
           resolution={1024}
           frames={1}
           position={[0, -1.16, 0]}
@@ -25,7 +36,7 @@ export default function SampleR3f() {
           blur={0.5}
           opacity={1}
           far={20}
-        />
+        /> */}
 
         <Environment resolution={512}>
           {/* Ceiling */}
