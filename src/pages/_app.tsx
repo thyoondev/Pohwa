@@ -22,7 +22,7 @@ export default function App({ Component, pageProps }: AppProps) {
       {isMounted && (
         <>
           <div
-            className="h-[100dvh] snap-y snap-mandatory overflow-y-scroll "
+            className="h-[calc(100dvh-56px)] mt-14 snap-y snap-mandatory overflow-y-scroll scroll-smooth"
             id="scroller"
           >
             <GlobalHeader />

@@ -3,7 +3,7 @@ import Image from "next/image";
 const GlobalFooter = () => {
   return (
     <>
-      <div className="h-[100dvh] w-full bg-primary p-4 pt-20 lg:p-14 snap-center shrink-0">
+      <div className="h-[calc(100dvh-56px)] w-full bg-primary p-4 lg:p-14 snap-center shrink-0">
         <p className="text-background text-4xl lg:text-6xl font-archivo -tracking-[.04em]">
           Motorcycle isn&apos;t just a machine,
           <br /> it&apos;s an expression of freedom, passion, <br /> and the
@@ -15,7 +15,7 @@ const GlobalFooter = () => {
           style.
         </p>
       </div>
-      <footer className="h-[100dvh] w-full bg-background flex justify-start items-center gap-4 px-4 relative snap-center shrink-0">
+      <footer className="h-[calc(100dvh-56px)] w-full bg-background flex justify-start items-center gap-4 px-4 relative snap-center shrink-0">
         <figure className="w-full h-full flex justify-center items-center">
           <Image src="/pohwa_logo.svg" alt="logo" width={200} height={96} />
         </figure>

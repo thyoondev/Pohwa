@@ -6,13 +6,16 @@ import { MENU_LIST } from "@/entities/menuList";
 
 const GlobalHeader = () => {
   const isDesktop = useMediaQuery("(min-width: 640px)");
+
   return (
-    <header className="fixed top-0 left-0 z-10 w-full lg:h-12 flex justify-between items-center px-4 pt-4">
+    <header
+      className={`fixed top-0 left-0 z-10 w-full lg:h-14 flex justify-between items-center px-4 py-2 transition-colors duration-300 bg-background`}
+    >
       <figure className="">
         <Image
           src="/pohwa_logo.svg"
-          width={isDesktop ? 80 : 80}
-          height={isDesktop ? 48 : 80}
+          width={isDesktop ? 70 : 60}
+          height={isDesktop ? 42 : 40}
           alt="logo"
         />
       </figure>

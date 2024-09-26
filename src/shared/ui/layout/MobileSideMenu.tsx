@@ -17,7 +17,7 @@ export function MobileSideMenu() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="outline" className="p-2">
+        <Button variant="outline" size={"icon"}>
           <Menu />
         </Button>
       </SheetTrigger>
