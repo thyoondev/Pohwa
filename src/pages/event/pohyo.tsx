@@ -19,13 +19,13 @@ const Pohyo = () => {
       </video>
       <div className="absolute inset-0 bg-black bg-opacity-50" />{" "}
       {/* 오버레이 추가 */}
-      <div className="relative flex flex-col items-center justify-center h-full gap-8 z-10">
+      <div className="relative flex flex-col items-center justify-center h-full gap-4 p-4 ">
         <Image
           src="/pohyo.jpeg"
           alt="pohyo"
-          width={550}
-          height={900}
-          className="mx-auto"
+          width={1920}
+          height={1080}
+          className="w-full h-full max-h-[80dvh] object-contain cursor-pointer"
           onClick={handleRegister}
         />
         <Button
