@@ -25,7 +25,7 @@ const Pohyo = () => {
           alt="pohyo"
           width={1920}
           height={1080}
-          className="w-full h-full max-h-[80dvh] object-contain cursor-pointer"
+          className="w-full h-full max-h-[60dvh] object-contain cursor-pointer"
           onClick={handleRegister}
         />
         <Button
