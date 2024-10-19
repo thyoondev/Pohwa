@@ -3,7 +3,8 @@ import {
   Lightformer,
   OrbitControls,
   ScrollControls,
-  Text,
+  useVideoTexture,
+  useTexture,
 } from "@react-three/drei";
 import { Effects } from "@/features/r3f/effects";
 import { Model } from "@/features/r3f/v4r";
@@ -13,6 +14,16 @@ import { Canvas } from "@react-three/fiber";
 import { isMobile } from "react-device-detect";
 
 export default function SampleR3f() {
+  function VideoMaterial({ url }) {
+    const texture = useVideoTexture(url);
+    return <meshBasicMaterial map={texture} toneMapped={false} />;
+  }
+
+  function FallbackMaterial({ url }) {
+    const texture = useTexture(url);
+    return <meshBasicMaterial map={texture} toneMapped={false} />;
+  }
+
   return (
     <Canvas
       onTouchStart={(e) => e.preventDefault()}
@@ -21,7 +32,7 @@ export default function SampleR3f() {
     >
       <color attach="background" args={["#0A0A0A"]} />
 
-      {!isMobile && (
+      {/* {!isMobile && (
         <Text
           scale={[6, 10, 10]}
           position={[0, 0, -10]}
@@ -31,7 +42,13 @@ export default function SampleR3f() {
         >
           POHWA
         </Text>
-      )}
+      )} */}
+      {/* <mesh scale={[30, 15, 0]}>
+        <planeGeometry />
+        <Suspense>
+          <VideoMaterial url="/assets/video/main/powha_video_pj5.mp4" />
+        </Suspense>
+      </mesh> */}
       <ScrollControls ages={3}>
         <Camera />
         <hemisphereLight intensity={0.5} />
@@ -122,6 +139,8 @@ export default function SampleR3f() {
             enablePan={false}
             enableZoom={true}
             enableRotate={true}
+            autoRotate={true}
+            autoRotateSpeed={0.3}
           />
         )}
       </ScrollControls>

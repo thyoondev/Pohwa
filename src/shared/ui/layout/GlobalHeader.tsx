@@ -28,7 +28,13 @@ const GlobalHeader = () => {
             href={menu.url.startsWith("http") ? menu.url : `${menu.url}`}
             target={menu.url.startsWith("http") ? "_blank" : "_self"}
           >
-            {menu.title}
+            {menu.id === 4 ? (
+              <span className="text-red-700 hover:text-red-500">
+                {menu.title}
+              </span>
+            ) : (
+              menu.title
+            )}
           </Link>
         ))}
       </nav>

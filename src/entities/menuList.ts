@@ -9,9 +9,15 @@ export const MENU_LIST = [
     title: "Work",
     url: "/work",
   },
+
   {
     id: 3,
     title: "Instagram",
     url: "https://www.instagram.com/pohwa_official/",
+  },
+  {
+    id: 4,
+    title: "포효 : POHYO",
+    url: "/event/pohyo",
   },
 ];

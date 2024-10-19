@@ -1,5 +1,6 @@
 import { ThemeProvider } from "@/shared/ui/theme-provider";
 import { Html, Head, Main, NextScript } from "next/document";
+import Script from "next/script";
 
 export default function Document() {
   return (
@@ -27,6 +28,11 @@ export default function Document() {
           type="image/png"
           sizes="16x16"
           href="https://pohwa.xyz/logo.png"
+        />
+        <Script
+          id="luma-checkout"
+          src="https://embed.lu.ma/checkout-button.js"
+          strategy="lazyOnload"
         />
       </Head>
       <body>
