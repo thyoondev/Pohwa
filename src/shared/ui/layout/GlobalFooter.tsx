@@ -1,3 +1,4 @@
+import { FOOTER_MENU_LIST } from "@/shared/constants/menu";
 import Image from "next/image";
 
 const GlobalFooter = () => {
@@ -19,8 +20,24 @@ const GlobalFooter = () => {
         <figure className="w-full h-full flex justify-center items-center">
           <Image src="/pohwa_logo.png" alt="logo" width={200} height={96} />
         </figure>
-        <p className="absolute bottom-2 left-2 text-xs uppercase">
-          © 2024 pohwa.xyz all rights reserved.
+        <p className="absolute bottom-2 left-2 text-xs uppercase font-bold">
+          {FOOTER_MENU_LIST.map((menu) => (
+            <span
+              key={menu.title}
+              onClick={menu.url}
+              className="cursor-pointer hover:underline"
+            >
+              {menu.title}
+            </span>
+          ))}
+        </p>
+
+        <p className="absolute bottom-2 right-2 text-xs  text-right font-bold">
+          <span className="uppercase">
+            © 2024 pohwa.xyz all rights reserved.
+          </span>
+          <br />
+          pohwa.official@gmail.com
         </p>
       </footer>
     </>

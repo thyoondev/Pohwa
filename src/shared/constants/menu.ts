@@ -1,8 +1,4 @@
-export const MAIN_MENU_LIST = [
-  // {
-  //   title: "About",
-  //   url: "/about",
-  // },
+export const FOOTER_MENU_LIST = [
   {
     title: " Instagram",
     url: () => window.open("https://www.instagram.com/pohwa_official/"),

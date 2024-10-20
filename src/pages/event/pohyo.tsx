@@ -32,7 +32,7 @@ const Pohyo = () => {
           onClick={handleRegister}
           className="text-xl mx-auto px-6 py-3  transition-colors"
         >
-          포효 : POHYO 참가 등록하기
+          Register for 포효 : POHYO
         </Button>
       </div>
     </div>
