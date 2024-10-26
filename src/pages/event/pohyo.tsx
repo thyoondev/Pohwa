@@ -48,8 +48,17 @@ const Pohyo = () => {
           width={1920}
         >
           <source src="/assets/video/s1000rr_video.mp4" type="video/mp4" />
-          <Image src="/logo.png" width={1920} height={1080} alt="" />
         </video>
+        <Image
+          src="/s1000rr.png"
+          alt="pohyo"
+          width={1920}
+          height={1080}
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          onClick={handleRegister}
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg=="
+        />
         <Button
           onClick={handleRegister}
           className="w-72 h-16 transition-colors z-10 text-white bg-gradient-to-r from-red-500 via-red-600 to-red-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-400 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
