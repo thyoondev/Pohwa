@@ -48,6 +48,7 @@ const Pohyo = () => {
           width={1920}
         >
           <source src="/assets/video/s1000rr_video.mp4" type="video/mp4" />
+          <Image src="/logo.png" width={1920} height={1080} alt="" />
         </video>
         <Button
           onClick={handleRegister}
