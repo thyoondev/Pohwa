@@ -1,4 +1,3 @@
-import { FOOTER_MENU_LIST } from "@/shared/constants/menu";
 import Image from "next/image";
 
 const GlobalFooter = () => {
@@ -20,7 +19,7 @@ const GlobalFooter = () => {
         <figure className="w-full h-full flex justify-center items-center">
           <Image src="/pohwa_logo.png" alt="logo" width={200} height={96} />
         </figure>
-        <p className="absolute bottom-2 left-2 text-xs uppercase font-bold">
+        {/* <p className="absolute bottom-2 left-2 text-xs uppercase font-bold">
           {FOOTER_MENU_LIST.map((menu) => (
             <span
               key={menu.title}
@@ -30,7 +29,7 @@ const GlobalFooter = () => {
               {menu.title}
             </span>
           ))}
-        </p>
+        </p> */}
 
         <p className="absolute bottom-2 right-2 text-xs  text-right font-bold">
           <span className="uppercase">
