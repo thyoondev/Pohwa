@@ -43,13 +43,13 @@ const Pohyo = () => {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-center"
         >
-          <source src="/pohyo2_1.mp4" type="video/mp4" />
+          <source src="/s1000rr.mp4" type="video/mp4" />
         </video>
         <Button
           onClick={handleRegister}
-          className="w-80 h-16 transition-colors z-10 text-white bg-gradient-to-r from-red-500 via-red-600 to-red-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-400 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
+          className="w-72 h-16 transition-colors z-10 text-white bg-gradient-to-r from-red-500 via-red-600 to-red-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-400 dark:focus:ring-red-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
           size={"lg"}
         >
           Register for 포효 : POHYO
