@@ -21,6 +21,7 @@ const config = {
       fontFamily: {
         anton: ["Anton", "sans-serif"],
         archivo: ["Archivo Black", "sans-serif"],
+        share_tech: ["Share Tech", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
