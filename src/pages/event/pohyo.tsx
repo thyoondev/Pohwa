@@ -44,6 +44,8 @@ const Pohyo = () => {
           muted
           playsInline
           className="absolute inset-0 w-full h-full object-cover object-center"
+          height={1080}
+          width={1920}
         >
           <source src="/assets/video/s1000rr_video.mp4" type="video/mp4" />
         </video>
