@@ -45,7 +45,7 @@ const Pohyo = () => {
           playsInline
           className="absolute inset-0 w-full h-full object-cover object-center"
         >
-          <source src="/assets/s1000rr.mp4" type="video/mp4" />
+          <source src="/assets/s1000rr_video.mp4" type="video/mp4" />
         </video>
         <Button
           onClick={handleRegister}
