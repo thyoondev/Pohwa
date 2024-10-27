@@ -60,9 +60,9 @@ const Pohyo = () => {
           blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACklEQVR4nGMAAQAABQABDQottAAAAABJRU5ErkJggg=="
         />
         <Button onClick={handleRegister} className="cybr-btn z-10 " size={"lg"}>
-          Register 포효 : POHYO_
+          이벤트 등록하기
           <span aria-hidden className="cybr-btn__glitch z-20 ">
-            Register for 포효 : POHYO_
+            이벤트 등록하기
           </span>
         </Button>
       </div>
