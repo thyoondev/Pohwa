@@ -1,4 +1,3 @@
-import { ThemeProvider } from "@/shared/ui/theme-provider";
 import { Html, Head, Main, NextScript } from "next/document";
 import Script from "next/script";
 
@@ -36,15 +35,8 @@ export default function Document() {
         />
       </Head>
       <body>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Main />
-          <NextScript />
-        </ThemeProvider>
+        <Main />
+        <NextScript />
       </body>
     </Html>
   );

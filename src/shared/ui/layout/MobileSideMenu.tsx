@@ -9,15 +9,20 @@ import {
 } from "@/shared/ui/sheet";
 import { Button } from "@/shared/ui/button";
 import Link from "next/link";
-import { MENU_LIST } from "@/entities/menuList";
+import { NAV_MENU_LIST } from "@/shared/constants/menu";
 import Image from "next/image";
 import { Menu } from "lucide-react";
+import router from "next/router";
 
 export function MobileSideMenu() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button variant="outline" size={"icon"}>
+        <Button
+          variant="outline"
+          size={"icon"}
+          className="border-none bg-transparent focus:ring-0 hover:bg-transparent"
+        >
           <Menu />
         </Button>
       </SheetTrigger>
@@ -28,7 +33,7 @@ export function MobileSideMenu() {
           </SheetTitle>
         </SheetHeader>
         <div className="grid py-4 text-2xl font-archivo">
-          {MENU_LIST.map((menu) => (
+          {NAV_MENU_LIST.map((menu) => (
             <SheetClose
               asChild
               className="grid grid-cols-4 border-b py-4"
@@ -37,14 +42,13 @@ export function MobileSideMenu() {
               <Link
                 href={menu.url.startsWith("http") ? menu.url : `${menu.url}`}
                 target={menu.url.startsWith("http") ? "_blank" : "_self"}
+                className={`relative  ${
+                  router.pathname === menu.url
+                    ? "text-red-700 hover:text-red-500"
+                    : "text-white"
+                }`}
               >
-                {menu.id === 4 ? (
-                  <span className="text-red-700 hover:text-red-500 text-nowrap">
-                    {menu.title}
-                  </span>
-                ) : (
-                  menu.title
-                )}
+                {menu.title}
               </Link>
             </SheetClose>
           ))}

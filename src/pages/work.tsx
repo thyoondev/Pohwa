@@ -31,7 +31,6 @@ const Work = () => {
               controls={true}
               height={"100%"}
               width={"auto"}
-              //   background={true}
               playsinline={true}
               className="bg-video"
               fallback={
