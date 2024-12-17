@@ -126,7 +126,7 @@ const Intro = () => {
               initial="hidden"
               animate="visible"
             >
-              <span className="text-white">Brack the Chain</span>
+              <span className="text-white">Break the Chain</span>
             </motion.div>
           </div>
         )}
