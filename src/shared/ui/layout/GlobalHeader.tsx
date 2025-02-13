@@ -76,7 +76,7 @@ const GlobalHeader = () => {
                 }}
                 className={`relative mr-4 ${
                   router.pathname === menu.url
-                    ? "pl-8 text-red-700 hover:text-red-500"
+                    ? "text-red-700 hover:text-red-500"
                     : "text-white"
                 }`}
               >
