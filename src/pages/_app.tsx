@@ -1,5 +1,4 @@
 import "@/shared/styles/globals.css";
-import GlobalFooter from "@/shared/ui/layout/GlobalFooter";
 import GlobalHeader from "@/shared/ui/layout/GlobalHeader";
 import { ThemeProvider } from "next-themes";
 import type { AppProps } from "next/app";
@@ -7,6 +6,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useMediaQuery } from "@/shared/hooks/useMediaQuery";
+import GlobalFooter from "@/shared/ui/layout/GlobalFooter";
 
 // 마우스 위치 추적을 위한 커스텀 훅
 function useMousePosition() {
@@ -112,16 +112,11 @@ export default function App({ Component, pageProps }: AppProps) {
       {isMounted && (
         <>
           {isDesktop && <ScrollGuide />}
-          <div
-            className="h-[100dvh] snap-y snap-mandatory overflow-y-scroll scroll-smooth perspective-[1000px]"
-            id="scroller"
-            style={{
-              scrollSnapType: "y mandatory",
-              transformStyle: "preserve-3d",
-            }}
-          >
+          <div className="min-h-[100dvh] flex flex-col" id="scroller">
             <GlobalHeader />
-            <Component {...pageProps} />
+            <main className="flex-1">
+              <Component {...pageProps} />
+            </main>
             <GlobalFooter />
           </div>
         </>

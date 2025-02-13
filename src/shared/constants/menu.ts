@@ -13,24 +13,24 @@ export const NAV_MENU_LIST = [
   },
   {
     id: 2,
+    title: "About",
+    url: "/about",
+  },
+  {
+    id: 3,
     title: "Work",
     url: "/work",
   },
   {
-    id: 3,
+    id: 4,
     title: "Instagram",
     url: "https://www.instagram.com/pohwa_official/",
     target: "_blank",
   },
   {
-    id: 4,
+    id: 5,
     title: "Shop",
     // url: "https://shop.pohwa.xyz",
     url: "https://pohwashop.imweb.me",
   },
-  // {
-  //   id: 4,
-  //   title: "포효: POHYO",
-  //   url: "/event/pohyo",
-  // },
 ];

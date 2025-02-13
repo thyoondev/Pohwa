@@ -4,10 +4,25 @@ import Link from "next/link";
 import { MobileSideMenu } from "./MobileSideMenu";
 import { NAV_MENU_LIST } from "@/shared/constants/menu";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 const GlobalHeader = () => {
   const router = useRouter();
   const isDesktop = useMediaQuery("(min-width: 640px)");
+  const [scale, setScale] = useState(2);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScale(1);
+      } else {
+        setScale(2);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <header
@@ -22,7 +37,7 @@ const GlobalHeader = () => {
           width={isDesktop ? 70 : 60}
           height={isDesktop ? 70 : 40}
           alt="logo"
-          className="cursor-pointer mt-3 lg:mt-0"
+          className="cursor-pointer mt-3 lg:mt-0 transition-all duration-300"
         />
       </figure>
       <div className="hidden lg:flex">
