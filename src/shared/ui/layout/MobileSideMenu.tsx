@@ -41,7 +41,7 @@ export function MobileSideMenu() {
             >
               <Link
                 href={menu.url.startsWith("http") ? menu.url : `${menu.url}`}
-                target={menu.url.startsWith("http") ? "_blank" : "_self"}
+                target={menu.target === "_blank" ? "_blank" : "_self"}
                 className={`relative  ${
                   router.pathname === menu.url
                     ? "text-red-700 hover:text-red-500"
