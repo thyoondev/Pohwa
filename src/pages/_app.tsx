@@ -5,7 +5,7 @@ import { ThemeProvider } from "next-themes";
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useMediaQuery } from "@/shared/hooks/useMediaQuery";
 
 // 마우스 위치 추적을 위한 커스텀 훅
@@ -121,41 +121,8 @@ export default function App({ Component, pageProps }: AppProps) {
             }}
           >
             <GlobalHeader />
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={router.pathname}
-                initial={{
-                  opacity: 0,
-                  x: -100,
-                  y: 100,
-                  scale: 0.95,
-                }}
-                animate={{
-                  opacity: 1,
-                  x: 0,
-                  y: 0,
-                  scale: 1,
-                }}
-                exit={{
-                  opacity: 0,
-                  x: 100,
-                  y: -100,
-                  scale: 0.95,
-                }}
-                transition={{
-                  duration: 0.4,
-                  ease: [0.645, 0.045, 0.355, 1.0],
-                }}
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  backgroundColor: "var(--background)",
-                }}
-              >
-                <Component {...pageProps} />
-                <GlobalFooter />
-              </motion.div>
-            </AnimatePresence>
+            <Component {...pageProps} />
+            <GlobalFooter />
           </div>
         </>
       )}

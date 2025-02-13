@@ -18,13 +18,15 @@ export const NAV_MENU_LIST = [
   },
   {
     id: 3,
-    title: "Shop",
-    url: "/shop",
+    title: "Instagram",
+    url: "https://www.instagram.com/pohwa_official/",
+    target: "_blank",
   },
   {
     id: 4,
-    title: "Instagram",
-    url: "https://www.instagram.com/pohwa_official/",
+    title: "Shop",
+    // url: "https://shop.pohwa.xyz",
+    url: "https://pohwashop.imweb.me",
   },
   // {
   //   id: 4,

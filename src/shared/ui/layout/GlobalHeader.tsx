@@ -11,18 +11,18 @@ const GlobalHeader = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 z-50 w-full h-14 flex justify-between items-center px-8 transition-colors duration-300 bg-transparent`}
+      className={`fixed top-0 left-0 z-50 w-full h-[70px] flex justify-between items-center px-4 transition-colors duration-300 bg-transparent`}
     >
       <figure
         onClick={() => router.push("/")}
         className="flex items-center justify-center"
       >
         <Image
-          src="/pohwa_logo.png"
-          width={isDesktop ? 120 : 60}
-          height={isDesktop ? 56 : 40}
+          src="/pohwa_logo2.png"
+          width={isDesktop ? 70 : 60}
+          height={isDesktop ? 70 : 40}
           alt="logo"
-          className="cursor-pointer mt-3 lg:mt-8"
+          className="cursor-pointer mt-3 lg:mt-0"
         />
       </figure>
       <div className="hidden lg:flex">
@@ -47,54 +47,44 @@ const GlobalHeader = () => {
           Seoul, Korea
         </span>
       </div>
-      <nav className="text-white text-3xl font-sans lg:flex hidden uppercase font-semibold">
-        {NAV_MENU_LIST.map((menu, index) => (
-          <Link
-            key={menu.id}
-            href={menu.url.startsWith("http") ? menu.url : `${menu.url}`}
-            target={menu.url.startsWith("http") ? "_blank" : "_self"}
-          >
-            <span
-              onMouseEnter={(e) => {
-                const target = e.target as HTMLElement;
-                target.style.opacity = "0";
-                setTimeout(() => {
-                  target.style.opacity = "1";
-                }, 30);
-              }}
-              className={`relative  ${
-                router.pathname === menu.url
-                  ? "pl-8 text-red-700 hover:text-red-500"
-                  : "text-white"
-              }`}
+      <nav className="text-white text-lg font-sans lg:flex hidden uppercase font-semibold">
+        {NAV_MENU_LIST.map((menu, index) => {
+          if (menu.title === "Shop") {
+            return (
+              <button
+                key={menu.id}
+                onClick={() => window.open(menu.url, "_blank")}
+                className="uppercase px-2 py-0.5 -mt-[1px] bg-red-600 hover:bg-transparent text-white transition-all duration-200  rounded-full"
+              >
+                {menu.title}
+              </button>
+            );
+          }
+          return (
+            <Link
+              key={menu.id}
+              href={menu.url.startsWith("http") ? menu.url : `${menu.url}`}
+              target={menu?.target === "_blank" ? "_blank" : "_self"}
             >
-              {router.pathname === menu.url && (
-                <span
-                  className="absolute left-0 top-1/2 -translate-y-1/2 text-3xl -mt-0.5"
-                  style={{
-                    animation: "pulse 0.3s ease-in-out",
-                  }}
-                >
-                  ●
-                  <style jsx>{`
-                    @keyframes pulse {
-                      0% {
-                        transform: translateY(-50%) scale(0);
-                      }
-                      100% {
-                        transform: translateY(-50%) scale(1);
-                      }
-                    }
-                  `}</style>
-                </span>
-              )}
-              {menu.title}
-            </span>
-            {index !== NAV_MENU_LIST.length - 1 && (
-              <span className="mx-4 ">/</span>
-            )}
-          </Link>
-        ))}
+              <span
+                onMouseEnter={(e) => {
+                  const target = e.target as HTMLElement;
+                  target.style.opacity = "0";
+                  setTimeout(() => {
+                    target.style.opacity = "1";
+                  }, 30);
+                }}
+                className={`relative mr-4 ${
+                  router.pathname === menu.url
+                    ? "pl-8 text-red-700 hover:text-red-500"
+                    : "text-white"
+                }`}
+              >
+                {menu.title}
+              </span>
+            </Link>
+          );
+        })}
       </nav>
       <div className="lg:hidden">
         <MobileSideMenu />
