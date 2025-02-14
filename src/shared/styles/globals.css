@@ -64,11 +64,16 @@
 }
 
 @layer base {
+  html {
+    overflow-y: scroll;
+    overscroll-behavior: none;
+  }
   * {
     @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
+    overscroll-behavior-y: none;
   }
 }
 /* 
