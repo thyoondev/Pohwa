@@ -10,7 +10,10 @@ export default function Document() {
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover, shrink-to-fit=no"
         />
         <title>포화. 적</title>
-        <meta name="description" content="포화. 적" />
+        <meta
+          name="description"
+          content="포화. 적. Pohwa Official Website. 포화 공식 웹사이트."
+        />
         <meta property="og:title" content="포화. 적" />
         <meta property="og:description" content="포화. 적" />
         <meta property="og:url" content="https://pohwa.xyz/" />
