@@ -60,7 +60,7 @@ const Intro = () => {
             initial="hidden"
             animate="visible"
           >
-            <span className="text-white">Break the Chain</span>
+            <span>Break the Chain</span>
           </motion.div>
         </div>
       </div>
