@@ -5,39 +5,24 @@ import Image from "next/image";
 const SHOP_ITEMS = [
   {
     id: 1,
-    title: "Item 1",
-    description: "Description 1",
-    content: "Content 1",
+    title: "POHWA Logo Balaclava - Black",
+    description: "₩18,000",
+    imgUrl: "https://cdn.imweb.me/thumbnail/20250214/8dabe2e3aaffd.gif",
+    url: "http://shop.pohwa.xyz/?idx=16",
   },
   {
     id: 2,
-    title: "Item 2",
-    description: "Description 2",
-    content: "Content 2",
+    title: "POHWA Logo Cap - Black",
+    description: "₩35,000",
+    imgUrl: "https://cdn.imweb.me/thumbnail/20250214/d38e210bcaaba.gif",
+    url: "http://shop.pohwa.xyz/?idx=15",
   },
   {
     id: 3,
-    title: "Item 3",
-    description: "Description 3",
-    content: "Content 3",
-  },
-  {
-    id: 4,
-    title: "Item 4",
-    description: "Description 4",
-    content: "Content 4",
-  },
-  {
-    id: 5,
-    title: "Item 5",
-    description: "Description 5",
-    content: "Content 5",
-  },
-  {
-    id: 6,
-    title: "Item 6",
-    description: "Description 6",
-    content: "Content 6",
+    title: "POHWA Logo Hoodie - Black",
+    description: "₩65,000",
+    imgUrl: "https://cdn.imweb.me/thumbnail/20250214/04021b7a0cda1.gif",
+    url: "http://shop.pohwa.xyz/?idx=14",
   },
 ];
 
@@ -63,27 +48,25 @@ export default function Home() {
                   align: "center",
                   loop: true,
                 }}
-                className="w-full"
+                className="w-full "
               >
-                <CarouselContent className="-ml-2">
+                <CarouselContent className="justify-around">
                   {SHOP_ITEMS.map((item) => (
                     <CarouselItem
                       key={item.id}
-                      className="pl-8 basis-full md:basis-[45%] lg:basis-[30%]"
+                      className="basis-10/12 md:basis-[45%] lg:basis-[30%]"
                     >
                       <div
-                        className="w-full cursor-pointer bg-white"
-                        onClick={() =>
-                          window.open("https://pohwashop.imweb.me", "_blank")
-                        }
+                        className=" w-full cursor-pointer bg-white "
+                        onClick={() => window.open(item.url)}
                       >
-                        <div className="aspect-[3/4] w-full">
+                        <div className="aspect-[3/4] w-full ">
                           <Image
-                            src={`/pohwa_logo.png`}
+                            src={item.imgUrl}
                             alt={`Shop item ${item.id}`}
                             width={1000}
                             height={1000}
-                            className="object-contain w-full h-full"
+                            className="object-cover w-full h-full "
                           />
                         </div>
                         <div className="p-4">
